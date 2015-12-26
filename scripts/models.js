@@ -49,7 +49,7 @@ class Crafts extends Backbone.Collection {
 }
 class Activities extends Backbone.Collection {
   get url() {
-    return '../PhysActivities.JSON'
+    return 'PhysActivities.JSON'
   }
   get model() {
     return Activity
@@ -57,7 +57,7 @@ class Activities extends Backbone.Collection {
 }
 class Meals extends Backbone.Collection {
   get url() {
-    return '../meals.JSON'
+    return 'meals.JSON'
   }
   get model() {
     return Meal
