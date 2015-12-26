@@ -1,0 +1,51 @@
+[
+
+    {
+        "category": "Physical Activities",
+        "title": "Tumbling Tower",
+        "materials": "Blocks or small boxes, a ball.",
+        "directions": "<br>1. Stack the blocks to build a tower<br>2. Stand at least 2 feet away and kick the ball into the tower, causing it to break apart<br>3. Repeat.",
+        "cost": "4.00",
+        "age": "18mo+"
+    },
+    {
+        "category": "Physical Activities",
+        "title": "Empty the Milk Jug",
+        "materials": "15-20 white clothespins, Gallon sized milk jug",
+        "directions": "<br>Fill the milk jug with the clothespins and have them shake it upside down until they all fall out.",
+        "cost": "4.50",
+        "age": "6mo+"
+    },
+    {
+        "category": "Physical Activities",
+        "title": "The Sticky Foot Runway",
+        "materials": "4-6ft of contact paper, duct tape, music (optional)",
+        "directions": "<br>1. Tape the contact paper to the floor so it is secure<br>2. Remove the contact paper covering <br>3. Have the child walk, skip, or jump across the sticky runway.",
+        "cost": "5.00",
+        "age": "18mo+"
+    },
+    {
+        "category": "Physical Activities",
+        "title": "Musical Bubble Dance",
+        "materials": "Bubble wrap, duct tape, music",
+        "directions": "<br>1. Secure a large area of bubble wrap to the floor with tape <br>2. Play music and dance on the bubble wrap.",
+        "cost": "6.00",
+        "age": "1+"
+    },
+    {
+        "category": "Physical Activities",
+        "title": "Single-Leg Balances",
+        "materials": "NONE",
+        "directions":"<br>1. Single-Leg Balance: Stand on 1 foot (Hold single-leg balance for 3 seconds) <br>2. Kimbo Stand: Cross one leg over the other and touch that toe to the floor. Stretch your arms out to the side to help you balance <br>3. Stork Stand: Balance like a bird called a stork. Balance on 1 foot. Put the other foot on the side of your knee. Both arms out to the side. Hold that pose. Try the other leg <br>4. Sideways Balance: Stretch your arms to the side. Lift 1 leg straight out to the side. Hold your pose. Switch legs and try again. Hold it steady <br>5. Backward Balance: Stretch your arms to the side. Lift 1 leg backward (leg is parallel to the ground) while you lean forward. Hold your pose. Switch <br>6. Forward Balance: Stretch your arms to the side. Raise 1 leg in front of you. Point your toes and hold your pose. Switch.",
+        "cost": "FREE",
+        "age": "1+"
+    },
+    {
+        "category": "Physical Activities",
+        "title": "",
+        "materials": "",
+        "directions": "",
+        "cost": "",
+        "age": ""
+    }
+]

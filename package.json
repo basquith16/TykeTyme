@@ -13,7 +13,34 @@
   "author": "Brian M Asquith",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/basquith16/TykeTyme/issues"
+    "url": "https://github.com/basquith16/TykeTyme/issues",
+    "homepage": "https://github.com/basquith16/TykeTyme#readme"
   },
-  "homepage": "https://github.com/basquith16/TykeTyme#readme"
+  "dependencies": {
+    "babel-core": "^6.3.26",
+    "babelify": "^7.2.0",
+    "backbone": "^1.2.3",
+    "browser-sync": "^2.10.1",
+    "browserify": "^12.0.1",
+    "gh-pages": "^0.6.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "*",
+    "gulp-jshint": "*",
+    "gulp-less": "^3.0.5",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-server-livereload": "^1.5.4",
+    "gulp-util": "^3.0.7",
+    "node-notifier": "^4.4.0",
+    "underscore": "^1.8.3",
+    "vinyl-source-stream": "^1.1.0",
+    "wiredep": "^2.2.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.0.16",
+    "babelify": "^7.2.0",
+    "browser-sync": "^2.10.0",
+    "gulp": "^3.9.0",
+    "wiredep": "^2.2.2"
+  }
 }
