@@ -41,7 +41,7 @@ class Meal extends Backbone.Model {
 }
 class Crafts extends Backbone.Collection {
   get url() {
-    return '../crafts.jsonl'
+    return 'crafts.jsonl'
   }
   get model() {
     return Craft
