@@ -14,7 +14,7 @@ class PlansView extends Backbone.View {
     this.$el.html(this.template);
     var list = $('#dragList', this.$el);
     _.each(this.model.get('plans'), function(plan) {
-      list.append($('<li class="fc-event">' + plan.displayName + '</li>'));
+      list.append($('<li class="fc-event">' + plan.displayName + '<span class="removeEvent glyphicon glyphicon-trash pull-right" id="Delete"></span>'+ '</li>'));
     });
     $('#external-events').html(this.$el);
     $('.fc-event').each(function() {
@@ -41,6 +41,11 @@ class PlansView extends Backbone.View {
       return false;
     });
   }
+  eventClick(calEvent, jsEvent, view) {
+  if (jsEvent.target.id === 'Delete') {
+    $("#myModal").modal(); // Maybe show a modal dialog asking the user if he wants to delete the event. 
+  }
+}
 }
 class CalendarView extends Backbone.View {
   get template() {
@@ -50,7 +55,6 @@ class CalendarView extends Backbone.View {
     this.listenTo(this.model, 'change', this.render);
     this.render();
 
-    // $('#trashBin').droppable();
   }
   handleDrop(event) {
     console.log('dropped!');
@@ -63,20 +67,6 @@ class CalendarView extends Backbone.View {
     });
     localStorage.setItem('events', JSON.stringify(events));
   }
-
-  trashDrop(event) {
-    console.log('dropped!');
-    var events = $('#trashBin').html('removeEvents').map((event) => {
-    var events = $('#trashBin').html('clientEvents').map((event) => {
-      return {
-        title: event.title,
-        start: event.start.format("L"),
-        allDay: true
-      }
-    });
-    localStorage.setItem('events', JSON.stringify(events));
-  })
-}
 
   render() {
     this.$el.html(this.template);

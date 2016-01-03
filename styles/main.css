@@ -2,26 +2,14 @@
 .container {
   background: linear-gradient(rgba(76, 186, 149, .1), rgba(76, 186, 149, .4));
   border: 1px solid rgba(76, 186, 149, .7);
-  margin-top: -15px;
-  margin-left: 1.8%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
 }
 
-.tabs {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  width: 100%;
+#wrap {
+  margin: -.1em 0 0 4%;
 }
 
 input {
   margin-left: -7px;
-}
-
-.content {
-  margin: 40px 0 0 0;
 }
 
 #contact p {
@@ -29,70 +17,51 @@ input {
   font-size: 24px;
 }
 
-#trashBin {
-  background-image: url('../images/trashBin.ico');
-  background-size: cover;
-  height: 60px;
-  width: 60px;
-  margin: 20px 0 0 35px;
-}
-
-.text-muted {
+.text-left {
   font-family: 'Caveat', cursive;
   font-weight: 900;
-  font-size: 40px;
+  font-size: 50px;
   color: rgb(64, 134, 177);
-  padding-top: 15px;
-}
 
-span {
-  font-weight: 600;
-  color: rgb(64, 134, 177);
 }
 
 .eventDivs {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  margin: 5px 0 0 80px;
   font-size: 24px;
-  font-family: Bodoni;
-  height: 40px;
+  font-family: Kanit;
 }
 
 li a {
-  margin-left: -50px;
-  border: 1px solid rgba(76, 186, 149, .6);
   border-radius: 5px;
   height: 25px;
   color: white;
   text-shadow: 1px 1px black;
   line-height: 0;
-  background: -webkit-linear-gradient(red, blue); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(red, blue); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(red, blue); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(rgba(76, 186, 149, .1), rgba(76, 186, 149, 0)); /* Standard syntax */
 }
 
 li a:visited {
+  background-image: none;
   text-decoration: none;
+  background: transparent;
   color: white;
 }
 
 li a:active {
+  background-image: none;
   text-decoration: none;
+  background: transparent;
   color: white;
 }
 
 li a:hover {
+  background-image: none;
   text-decoration: none;
+  background: transparent;
   color: white;
 }
 
 #external-events .fc-event {
   border: none;
-  font-family: Bodoni;
+  font-family: Kanit;
   text-align: center;
 }
 
@@ -107,12 +76,6 @@ h3 {
   padding-bottom: 19px;
 }
 
-header {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  }
-
 .login {
   opacity: 0;
   height: 22px;
@@ -121,7 +84,7 @@ header {
 }
 
 .login a {
-  font-family: Bodoni;
+  font-family: Kanit;
   font-size: 20px;
   color: rgb(64, 134, 177);
 }
@@ -131,6 +94,8 @@ header {
 }
 
 a:visited, a:active, a:focus {
+  background-image: none;
+  background: transparent;
   text-decoration: none;
 }
 
@@ -142,7 +107,7 @@ a:visited, a:active, a:focus {
 }
 
 .register a {
-font-family: Bodoni;
+font-family: Kanit;
 font-size: 20px;
 color: rgb(64, 134, 177);
 }
@@ -153,7 +118,7 @@ color: rgb(64, 134, 177);
 
 #contact {
   color: rgb(64, 134, 177);
-  font-family: Bodoni;
+  font-family: Kanit;
 }
 
 .contactUs {
@@ -162,12 +127,12 @@ color: rgb(64, 134, 177);
 
 #manualAdd input {
   text-align: center;
-  margin-bottom: 7px;
+  margin: 0 0 7px 3%;
 }
 
 #addItem {
   border-radius: 5%;
-  font-family: Bodoni;
+  font-family: Kanit;
   background-color: rgba(64, 134, 177, .4);
   font-size: 16px;
   line-height: 1em;
@@ -176,4 +141,24 @@ color: rgb(64, 134, 177);
 
 ul {
   list-style: none;
+}
+
+.mainLinks a{
+  max-width: 200px;
+}
+
+ul.nav a:hover {
+  background-image: none !important;
+  background: transparent !important;
+}
+
+ul.nav a:focus {
+  background-image: none !important;
+  background: transparent !important;
+}
+
+.closeon {
+  position: fixed;
+  float: right;
+  margin-left: 1%;
 }
