@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="styles/activityList.css">
   <link rel="stylesheet" href="styles/craftList.css">
   <link rel="stylesheet" href="styles/calendar.css">
+  <link rel="stylesheet" href='schedule/lib/cupertino/jquery-ui.min.css'></script>
+
   <link rel="stylesheet" href="styles/main.css">
   <!-- <link rel="stylesheet" href="styles/responsive.css"> -->
   <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet' type='text/css'>
@@ -24,7 +26,6 @@
   <link href='schedule/fullcalendar.print.css' rel='stylesheet' media='print' />
   <script src="bower_components/modernizr/modernizr.js"></script>
 </head>
-
 <body>
   <header>
     <h3 class="text-left">TykeTyme</h3>
@@ -68,7 +69,7 @@
       <div class="title">{{ title }}</div>
       <div class="materials">
         <span>What you'll need:</span> {{ materials }}</div>
-      <div class="instruct">
+      <div class="instruct" id="crafyInstruct">
         <span>Instructions:</span> {{ instructions }}</div>
       <div class="cost">
         <span>Cost:</span> ${{ cost }}</div>
@@ -154,11 +155,13 @@
     ga('send', 'pageview');
 
   </script>
-  <script src='schedule/lib/moment.min.js'></script>
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script src="schedule/lib/jquery.min.js"></script>
   <script src='schedule/lib/jquery-ui.custom.min.js'></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+  <script src='schedule/lib/moment.min.js'></script>
   <script src='schedule/fullcalendar.min.js'></script>
+  <script src='schedule/gcal.js'></script>
+  <script src='schedule/lang-all.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js'></script>
   <script src="scripts/bootstrap.min.js"></script>

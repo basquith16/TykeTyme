@@ -46,6 +46,10 @@ text-shadow: 1px 1px black;
   background: rgba(76, 186, 149, .4);
 }
 
+.planCat {
+  opacity: 0;
+}
+
 
 #external-events {
   font-family: Kanit;

@@ -10,7 +10,12 @@ class Schedule extends Backbone.Model {
     this.bind('change', this.persist);
   }
   persist() {
-    var plans = this.get('plans').map((plan) => { return plan.get('title') });
+    var plans = this.get('plans').map((plan) => {
+      return (
+        plan.get('title'),
+        plan.get('category')
+      )
+    });
     localStorage.setItem('plans', JSON.stringify(plans));
   }
   get defaults() {
@@ -28,15 +33,24 @@ class Craft extends Backbone.Model {
   get displayName() {
     return this.get('title');
   }
+  get category() {
+    return this.get('category');
+  }
 }
 class Activity extends Backbone.Model {
   get displayName() {
     return this.get('title');
   }
+  get category() {
+    return this.get('category');
+  }
 }
 class Meal extends Backbone.Model {
   get displayName() {
     return this.get('title');
+  }
+  get category() {
+    return this.get('category');
   }
 }
 class Crafts extends Backbone.Collection {
