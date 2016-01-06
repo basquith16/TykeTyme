@@ -88,11 +88,8 @@ class CalendarView extends Backbone.View {
       },
       eventClick: function(event) {
         // opens events in a popup window
-        var elemTitle = $('span.fc-title').text();
-        var category = elemTitle.split('');
-        var category = category.slice(-1);
-        var category = category.join('');
-        console.log(category);
+        var category = (event.title).split('').slice(-1).join('');
+
         if (category == "3") {
           var windowURL = 'http://localhost:8000/#/meals'
         }
@@ -102,15 +99,16 @@ class CalendarView extends Backbone.View {
         else if(category == "2") {
           var windowURL = 'http://localhost:8000/#/activities'
         }
-        if ( event.title == "The Sticky Foot Runway") {
+
+        console.log(event.title);
+        if ( event.title == "The Sticky Foot Runway2") {
           var t = 950;
         }
         else if ( event.title == "Single-Leg Balances") {
           var t = 1800;
         }
         var w = window.open( windowURL, event,  'width=400,height=600');
-        setTimeout(function() { w.scrollTo(0,t) }, 1000);
-        console.log(event.title);
+        setTimeout(function() { w.scrollTo(0,t) }, 500);
         return false;
       },
 
