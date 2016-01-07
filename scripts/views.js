@@ -2,6 +2,7 @@
 _.templateSettings = {
   interpolate: /\{\{(.+?)\}\}/g
 };
+
 class PlansView extends Backbone.View {
   get template() {
     return $('#plansTemplate').text();
@@ -14,13 +15,13 @@ class PlansView extends Backbone.View {
     this.$el.html(this.template);
     var list = $('#dragList', this.$el);
     _.each(this.model.get('plans'), function(plan) {
-      list.append($('<li class="fc-event">' + plan.displayName + '</li>'));
-    });
+      list.append($('<li class="fc-event">' + plan.displayName + '  ' + '<span class="planCat">' + plan.category + '</span>' + '</li>'));
+      });
     $('#external-events').html(this.$el);
     $('.fc-event').each(function() {
       // store data so the calendar knows to render an event upon drop
       $(this).data('event', {
-        title: $.trim($(this).text()), // use the element's text as the event title
+        title: $(this).text(), // use the element's text as the event title
         stick: true, // maintain when user navigates (see docs on the renderEvent method)
       });
       $(this).draggable({
@@ -50,10 +51,8 @@ class CalendarView extends Backbone.View {
     this.listenTo(this.model, 'change', this.render);
     this.render();
 
-    // $('#trashBin').droppable();
   }
   handleDrop(event) {
-    console.log('dropped!');
     var events = $('#calendar').fullCalendar('clientEvents').map((event) => {
       return {
         title: event.title,
@@ -64,25 +63,14 @@ class CalendarView extends Backbone.View {
     localStorage.setItem('events', JSON.stringify(events));
   }
 
-  trashDrop(event) {
-    console.log('dropped!');
-    var events = $('#trashBin').html('removeEvents').map((event) => {
-    var events = $('#trashBin').html('clientEvents').map((event) => {
-      return {
-        title: event.title,
-        start: event.start.format("L"),
-        allDay: true
-      }
-    });
-    localStorage.setItem('events', JSON.stringify(events));
-  })
-}
-
   render() {
     this.$el.html(this.template);
     $('#main').html(this.$el);
     $('#calendar', this.$el).fullCalendar({
-      events: JSON.parse(localStorage.getItem('events')),
+      googleCalendarApiKey: 'AIzaSyDJ9biHjohyZfDwcaWfHkemFLRnXKd1wW4',
+      events:
+        JSON.parse(localStorage.getItem('events')),
+        url: "https://www.google.com/calendar/feeds/basquithcpt%40gmail.com/public/basic",
       header: {
         left: 'prev,next today',
         center: 'title',
@@ -97,17 +85,51 @@ class CalendarView extends Backbone.View {
         if ($('#drop-remove').is(':checked')) {
           $(this).remove();
         }
+      },
+      eventClick: function(event) {
+        // opens events in a popup window
+        var category = (event.title).split('').slice(-1).join('');
+
+        if (category == "3") {
+          var windowURL = 'http://localhost:8000/#/meals'
+        }
+        else if( category == "1") {
+          var windowURL = 'http://localhost:8000/#/crafts'
+        }
+        else if(category == "2") {
+          var windowURL = 'http://localhost:8000/#/activities'
+        }
+
+        console.log(event.title);
+        if ( event.title == "The Sticky Foot Runway2") {
+          var t = 950;
+        }
+        else if ( event.title == "Single-Leg Balances") {
+          var t = 1800;
+        }
+        var w = window.open( windowURL, event,  'width=400,height=600');
+        setTimeout(function() { w.scrollTo(0,t) }, 500);
+        return false;
+      },
+
+      eventRender: function(event, element) {
+            element.find(".eventButton").click(function() {
+               $('#calendar').fullCalendar.remove($(this).event);
+            });
+        },
+
+      // eventDelete: function() {
+      //   $(".eventButton").on("click", function(){
+      //     $('#calendar').fullCalendar( 'removeEvents', $(this) )
+      //  });
+      // },
+
+      loading: function(bool) {
+        $('#loading').toggle(bool);
       }
     });
+
   }
-  // trashEvents() {
-  //   $('#trashBin').html({
-  //     editable: true,
-  //     droppable: true,
-  //     eventDrop: this.handleDrop,
-  //     eventReceive: this.handleDrop
-  //   })
-  // }
 }
 
 class CraftView extends Backbone.View {

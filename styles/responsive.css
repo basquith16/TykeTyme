@@ -5,9 +5,6 @@
   #eventDivs {
     width: auto;
   }
-  .container {
-    min-width: 100%;
-  }
 }
 @media all and (min-width: 400px) and (max-width: 599px) {
 
@@ -15,16 +12,6 @@
     font-size: 14px;
   }
 
-  .container {
-    min-width: 100%;
-  }
-
-  #wrap {
-    max-width: 100%;
-  }
-  #calendar {
-    max-width: 75%;
-  }
   #external-events {
     padding  : 0;
     max-width: 15%;
@@ -32,10 +19,6 @@
 
   #dragList, .fc-event {
     max-width: 50%;
-  }
-  #trashBin {
-    max-height: 50%;
-    margin: 0;
   }
 
   #drop-remove {
