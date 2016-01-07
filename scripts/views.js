@@ -114,15 +114,10 @@ class CalendarView extends Backbone.View {
 
       eventRender: function(event, element) {
             element.find(".eventButton").click(function() {
-               $('#calendar').fullCalendar.remove($(this).event);
+               $('#calendar').fullCalendar('removeEvents', $(this).event);
             });
         },
 
-      // eventDelete: function() {
-      //   $(".eventButton").on("click", function(){
-      //     $('#calendar').fullCalendar( 'removeEvents', $(this) )
-      //  });
-      // },
 
       loading: function(bool) {
         $('#loading').toggle(bool);
