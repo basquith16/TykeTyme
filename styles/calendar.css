@@ -50,6 +50,12 @@ text-shadow: 1px 1px black;
   opacity: 0;
 }
 
+.eventButton {
+  z-index: 999;
+  color: red;
+  background: transparent !important;
+  border: none;
+}
 #external-events {
   font-family: Kanit;
   width: 200px;

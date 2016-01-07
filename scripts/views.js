@@ -15,7 +15,7 @@ class PlansView extends Backbone.View {
     this.$el.html(this.template);
     var list = $('#dragList', this.$el);
     _.each(this.model.get('plans'), function(plan) {
-      list.append($('<li class="fc-event">' + plan.displayName + '<span class="planCat">' + plan.category + '</span>' + '</li>'));
+      list.append($('<li class="fc-event">' + plan.displayName + '  ' + '<span class="planCat">' + plan.category + '</span>' + '</li>'));
       });
     $('#external-events').html(this.$el);
     $('.fc-event').each(function() {
@@ -111,6 +111,18 @@ class CalendarView extends Backbone.View {
         setTimeout(function() { w.scrollTo(0,t) }, 500);
         return false;
       },
+
+      eventRender: function(event, element) {
+            element.find(".eventButton").click(function() {
+               $('#calendar').fullCalendar.remove($(this).event);
+            });
+        },
+
+      // eventDelete: function() {
+      //   $(".eventButton").on("click", function(){
+      //     $('#calendar').fullCalendar( 'removeEvents', $(this) )
+      //  });
+      // },
 
       loading: function(bool) {
         $('#loading').toggle(bool);
