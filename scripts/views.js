@@ -75,9 +75,9 @@ class CalendarView extends Backbone.View {
     this.$el.html(this.template);
     $('#main').html(this.$el);
     $('#calendar', this.$el).fullCalendar({
-      googleCalendarApiKey: 'AIzaSyDJ9biHjohyZfDwcaWfHkemFLRnXKd1wW4',
+      // googleCalendarApiKey: 'AIzaSyDJ9biHjohyZfDwcaWfHkemFLRnXKd1wW4',
       events: JSON.parse(localStorage.getItem('events')),
-      url: "https://www.google.com/calendar/feeds/basquithcpt%40gmail.com/public/basic",
+      // url: "https://www.google.com/calendar/feeds/basquithcpt%40gmail.com/public/basic",
       header: {
         left: 'prev,next today',
         center: 'title',
@@ -105,7 +105,6 @@ class CalendarView extends Backbone.View {
           var windowURL = 'http://basquith16.github.io/TykeTyme/#/activities'
         }
 
-        console.log(event.title);
         if (event.title == "The Sticky Foot Runway  2") {
           var t = 950;
         } else if (event.title == "Single-Leg Balances") {
@@ -122,12 +121,11 @@ class CalendarView extends Backbone.View {
         element.find(".eventButton").click(function() {
           $('#calendar').fullCalendar('removeEvents', event._id);
         });
-      },
-
-
-      loading: function(bool) {
-        $('#loading').toggle(bool);
       }
+
+      // loading: function(bool) {
+      //   $('#loading').toggle(bool);
+      // }
     });
 
   }
