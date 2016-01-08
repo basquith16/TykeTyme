@@ -12,8 +12,8 @@ class Schedule extends Backbone.Model {
   persist() {
     var plans = this.get('plans').map((plan) => {
       return (
-        plan.get('title'),
-        plan.get('category')
+        plan.get('category'),
+        plan.get('title')  
       )
     });
     localStorage.setItem('plans', JSON.stringify(plans));
