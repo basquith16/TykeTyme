@@ -91,17 +91,17 @@ class CalendarView extends Backbone.View {
         var category = (event.title).split('').slice(-1).join('');
 
         if (category == "3") {
-          var windowURL = 'http://basquith16.github.io/TykeTyme/#/meals'
+          var windowURL = 'http://localhost:8000/#/meals'
         }
         else if( category == "1") {
-          var windowURL = 'http://basquith16.github.io/TykeTyme/#/crafts'
+          var windowURL = 'http://localhost:8000/#/crafts'
         }
         else if(category == "2") {
-          var windowURL = 'http://basquith16.github.io/TykeTyme/#/activities'
+          var windowURL = 'http://localhost:8000/#/activities'
         }
 
         console.log(event.title);
-        if ( event.title == "The Sticky Foot Runway2") {
+        if ( event.title == "The Sticky Foot Runway  2") {
           var t = 950;
         }
         else if ( event.title == "Single-Leg Balances") {
@@ -114,7 +114,7 @@ class CalendarView extends Backbone.View {
 
       eventRender: function(event, element) {
             element.find(".eventButton").click(function() {
-               $('#calendar').fullCalendar('removeEvents', $(this).event);
+               $('#calendar').fullCalendar('removeEvents', event._id);
             });
         },
 
