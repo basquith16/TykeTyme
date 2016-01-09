@@ -1,39 +1,97 @@
-@media all and (min-width: 600px) and (max-width: 786px) {
+.navbar-default {
+  background-image: none;
+  background: none;
+  border: none;
+  color: white;
+}
+
+.navbar-header {
+  border: none;
+}
+
+.navbar-toggle {
+  color: white;
+  border: none;
+  padding: 0;
+  margin-bottom: 10%;
+}
+
+.navbar-toggle:focus {
+  background-image: none;
+  background: none;
+}
+
+@media all and (min-width: 1900px) {
+  #wrap {
+    min-width: 80%;
+  }
+}
+
+@media all and (max-width: 950px) {
+  #wrap {
+    min-width: 100%;
+  }
+  #main {
+    min-width: 100%;
+  }
+
+  #external-events {
+    min-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .fc-event {
+    max-width: 200px;
+    margin-left: 200px;
+  }
+}
+
+@media all and (max-width: 786px) {
   body > div.container > ul > li > a {
     font-size: 14px;
   }
+
+  #mainLogo {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  #calendar {
+    min-height: 100%;
+  }
+
+  #main {
+    min-height: 100%;
+    margin-bottom: 15%;
+  }
+
+  .fc-toolbar {
+    margin-top: -10%;
+  }
+
+  .fc-center h2 {
+    font-size: 24px;
+    padding-top: 10%;
+  }
+
+  #plansTitle {
+    font-size: 16px;
+  }
+
   #eventDivs {
     width: auto;
   }
 }
-@media all and (min-width: 400px) and (max-width: 599px) {
 
-  body > div.container > ul > li > a {
-    font-size: 14px;
-  }
-
-  #external-events {
-    padding  : 0;
-    max-width: 15%;
-  }
-
-  #dragList, .fc-event {
-    max-width: 50%;
-  }
-
-  #drop-remove {
-    display: none;
-  }
-  label {
-    display: none;
-  }
-  #manualAdd {
-    display: none;
-  }
-
-}
 
 /* ----------- Apple Watch ----------- */
-// @media (max-device-width: 42mm) and (min-device-width: 38mm) {
+//@media (max-device-width: 42mm) and (min-device-width: 38mm) {
 //
-// }
+//
+}

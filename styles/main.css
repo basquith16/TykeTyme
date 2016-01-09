@@ -22,7 +22,13 @@ input {
   font-weight: 900;
   font-size: 50px;
   color: rgb(64, 134, 177);
+}
 
+.navbar-toggle {
+  color: white;
+  z-index: 999;
+  opacity: 1;
+  padding-bottom: 50px;
 }
 
 .eventDivs {

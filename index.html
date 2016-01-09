@@ -20,7 +20,7 @@
   <link rel="stylesheet" href='schedule/lib/cupertino/jquery-ui.min.css'></script>
 
   <link rel="stylesheet" href="styles/main.css">
-  <!-- <link rel="stylesheet" href="styles/responsive.css"> -->
+  <link rel="stylesheet" href="styles/responsive.css">
   <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet' type='text/css'>
   <link href='schedule/fullcalendar.css' rel='stylesheet' />
   <link href='schedule/fullcalendar.print.css' rel='stylesheet' media='print' />
@@ -28,11 +28,11 @@
 </head>
 <body>
   <header>
-    <h3 class="text-left">TykeTyme</h3>
+    <h3 class="text-left" id="mainLogo">TykeTyme</h3>
     <!-- <div class="login"><a href="#">Login</a></div>
     <div class="register"><a href="#">Register</a></div> -->
   </header>
-  <nav class="navbar">
+  <nav class="navbar navbar-default">
     <div class="container">
       <div class="navbar-collapse collapse">
         <ul class="eventDivs nav nav-justified">
@@ -41,7 +41,7 @@
           <li class="mainLinks"><a href="#/activities">Activities</a></li>
           <li class="mainLinks"><a href="#/whatsAround">Nearby</a></li>
           <li class="mainLinks"><a href="#/meals">Meals</a></li>
-          <li class="mainLinks"><a href="#/contact">Contact Us</a></li>
+          <li class="mainLinks"><a href="#/contact">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -111,7 +111,7 @@
     </div>
   </script>
   <script type="text/html" id="plansTemplate">
-    <h4>Plans</h4>
+    <h4 id="plansTitle">Plans</h4>
     <ul id="dragList">
     </ul>
     <p>
