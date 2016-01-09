@@ -98,11 +98,11 @@ class CalendarView extends Backbone.View {
         var category = (event.title).split('').slice(-1).join('');
 
         if (category == "3") {
-          var windowURL = 'basquith16.github.io/TykeTyme/#/meals'
+          var windowURL = 'http://basquith16.github.io/TykeTyme/#/meals'
         } else if (category == "1") {
-          var windowURL = 'basquith16.github.io/TykeTyme/#/crafts'
+          var windowURL = 'http://basquith16.github.io/TykeTyme/#/crafts'
         } else if (category == "2") {
-          var windowURL = 'basquith16.github.io/TykeTyme/#/activities'
+          var windowURL = 'http://basquith16.github.io/TykeTyme/#/activities'
         }
 
         if (event.title == "The Sticky Foot Runway  2") {
