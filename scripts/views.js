@@ -99,11 +99,11 @@ class CalendarView extends Backbone.View {
         // var category = (event.title).split('').slice(-1).join('');
 
         if (event.title == "Tumbling Tower" || event.title == "Empty the Milk Jug" || event.title == "The Sticky Foot Runway" || event.title == "Musical Bubble Dance" || event.title == "Single-Leg Balances") {
-          var windowURL = 'http://localhost:8000/#/activities'
+          var windowURL = 'http://basquith16.github.io/TykeTyme/#/activities'
         } else if (event.title == "Create an Animal Mask" || event.title == "Homemade Scented Playdough" || event.title == "Bubble Paint Project" || event.title ==  "Nature Collage" || event.title == "Colored Rice Art" || event.title == "Paper-Mache Rain Stick") {
-          var windowURL = 'http://localhost:8000/#/crafts'
+          var windowURL = 'http://basquith16.github.io/TykeTyme/#/crafts'
         } else if (event.title == "Rice Paper Rolls" || event.title == "Sweet Potato Pie" || event.title == "Brown Rice, Carrots, and Greens" || event.title == "Broccoli Cavatelli" || event.title == "Healthy Popsicles") {
-          var windowURL = 'http://localhost:8000/#/meals'
+          var windowURL = 'http://basquith16.github.io/TykeTyme/#/meals'
         }
 
         if (event.title == "Homemade Scented Playdough" || event.title == "Sweet Potato Pie") {
