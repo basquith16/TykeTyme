@@ -11,10 +11,7 @@ class Schedule extends Backbone.Model {
   }
   persist() {
     var plans = this.get('plans').map((plan) => {
-      return (
-        plan.get('category'),
-        plan.get('title')  
-      )
+      return plan.get('title');
     });
     localStorage.setItem('plans', JSON.stringify(plans));
   }
@@ -31,26 +28,17 @@ class Schedule extends Backbone.Model {
 }
 class Craft extends Backbone.Model {
   get displayName() {
-    return this.get('title');
-  }
-  get category() {
-    return this.get('category');
+    return this.get('title')
   }
 }
 class Activity extends Backbone.Model {
   get displayName() {
     return this.get('title');
   }
-  get category() {
-    return this.get('category');
-  }
 }
 class Meal extends Backbone.Model {
   get displayName() {
     return this.get('title');
-  }
-  get category() {
-    return this.get('category');
   }
 }
 class Crafts extends Backbone.Collection {

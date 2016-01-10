@@ -15,7 +15,7 @@ class PlansView extends Backbone.View {
     this.$el.html(this.template);
     var list = $('#dragList', this.$el);
     _.each(this.model.get('plans'), function(plan) {
-      list.append($('<li class="fc-event">' + plan.displayName + '  ' + '<span class="planCat">' + plan.category + '</span>' + '</li>'));
+      list.append($('<li class="fc-event">' + plan.displayName +  '</li>'));
     });
     $('#external-events').html(this.$el);
     $('.fc-event').each(function() {
@@ -95,25 +95,51 @@ class CalendarView extends Backbone.View {
       },
       eventClick: function(event) {
         // opens events in a popup window
-        var category = (event.title).split('').slice(-1).join('');
+        var t = "";
+        // var category = (event.title).split('').slice(-1).join('');
 
-        if (category == "3") {
-          var windowURL = 'http://basquith16.github.io/TykeTyme/#/meals'
-        } else if (category == "1") {
-          var windowURL = 'http://basquith16.github.io/TykeTyme/#/crafts'
-        } else if (category == "2") {
-          var windowURL = 'http://basquith16.github.io/TykeTyme/#/activities'
+        if (event.title == "Tumbling Tower" || event.title == "Empty the Milk Jug" || event.title == "The Sticky Foot Runway" || event.title == "Musical Bubble Dance" || event.title == "Single-Leg Balances") {
+          var windowURL = 'http://localhost:8000/#/activities'
+        } else if (event.title == "Create an Animal Mask" || event.title == "Homemade Scented Playdough" || event.title == "Bubble Paint Project" || event.title ==  "Nature Collage" || event.title == "Colored Rice Art" || event.title == "Paper-Mache Rain Stick") {
+          var windowURL = 'http://localhost:8000/#/crafts'
+        } else if (event.title == "Rice Paper Rolls" || event.title == "Sweet Potato Pie" || event.title == "Brown Rice, Carrots, and Greens" || event.title == "Broccoli Cavatelli" || event.title == "Healthy Popsicles") {
+          var windowURL = 'http://localhost:8000/#/meals'
         }
 
-        if (event.title == "The Sticky Foot Runway  2") {
-          var t = 950;
-        } else if (event.title == "Single-Leg Balances") {
-          var t = 1800;
+        if (event.title == "Homemade Scented Playdough" || event.title == "Sweet Potato Pie") {
+          t = '760'
+        }
+        else if (event.title == "Bubble Paint Project") {
+          t = '1270'
+        }
+        else if (event.title == "Nature Collage" || event.title == "Oobleck") {
+          t = '2200'
+        }
+        else if (event.title == "Colored Rice Art") {
+          t = '2800'
+        }
+        else if (event.title == "Paper-Mache Rain Stick") {
+          t = '3300'
+        }
+        else if (event.title == "The Sticky Foot Runway" || event.title == "Musical Bubble Dance") {
+          t = '820'
+        }
+        else if (event.title == "Single-Leg Balances") {
+          t = '1460'
+        }
+        else if (event.title == "Brown Rice, Carrots, and Greens") {
+          t = '1180'
+        }
+        else if (event.title == "Broccoli Cavatelli") {
+          t = '1800'
+        }
+        else if (event.title == "Healthy Popsicles") {
+          t = '2400'
         }
         var w = window.open(windowURL, event, 'width=400,height=600');
         setTimeout(function() {
-          w.scrollTo(0, t)
-        }, 500);
+          w.scrollTo(0,t)
+        }, 800);
         return false;
       },
 
@@ -124,10 +150,6 @@ class CalendarView extends Backbone.View {
           localStorage.removeItem(event);
         });
       }
-
-      // loading: function(bool) {
-      //   $('#loading').toggle(bool);
-      // }
     });
 
   }

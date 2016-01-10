@@ -66,6 +66,7 @@
   </footer>
   <script type="text/template" id="craftTemplate">
     <div class="craftListing">
+      <a data-scroll href="#{{ anchor }}"></a>
       <div class="title">{{ title }}</div>
       <div class="materials">
         <span>What you'll need:</span> {{ materials }}</div>
@@ -80,6 +81,7 @@
   </script>
   <script type="text/template" id="activityTemplate">
     <div class="activityListing">
+      <section id="{{ title }}"></section>
       <div class="actTitle">{{ title }}</div>
       <div class="actDirect">
         <span>Directions:</Span>{{ directions }}</div>
@@ -94,6 +96,7 @@
   </script>
   <script type="text/html" id="mealTemplate">
     <div class="mealListing">
+      <section id="{{ title }}"></section>
       <div class="mealTitle">{{ title }}</div>
       <div class="mealIngred">
         <span>Ingredients:</span>{{ ingredients }}</div>
@@ -157,7 +160,9 @@
   </script>
   <script src="schedule/lib/jquery.min.js"></script>
   <script src='schedule/lib/jquery-ui.custom.min.js'></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+  <script src='schedule/lib/jquery.ui.touch-punch.min.js'></script>
+  <script src="scripts/jquery.scrollTo.js"></script>
+  <script src="scripts/jquery.localScroll.js"></script>
   <script src='schedule/lib/moment.min.js'></script>
   <script src='schedule/fullcalendar.min.js'></script>
   <script src='schedule/gcal.js'></script>
